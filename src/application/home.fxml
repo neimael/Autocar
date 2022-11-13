@@ -9,22 +9,22 @@
    <children>
       <ImageView fitHeight="410.0" fitWidth="733.0" layoutX="-129.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../images/Black%20and%20White%20Green%20Blue%20Basic%20Flow%20Chart%20Brainstorm%20Presentation%20(4).png" />
+            <Image url="@../img/Black%20and%20White%20Green%20Blue%20Basic%20Flow%20Chart%20Brainstorm%20Presentation%20(4).png" />
          </image>
       </ImageView>
       <ImageView fitHeight="107.0" fitWidth="275.0" layoutX="-12.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../images/Screenshot%202022-11-13%20112045.jpg" />
+            <Image url="@../img/Screenshot%202022-11-13%20112045.jpg" />
          </image>
       </ImageView>
       <ImageView fitHeight="259.0" fitWidth="404.0" layoutX="233.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../images/WhatsApp_Image_2022-10-22_at_12.54.26-removebg-preview.png" />
+            <Image url="@../img/WhatsApp_Image_2022-10-22_at_12.54.26-removebg-preview.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="116.0" fitWidth="117.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../images/Screenshot%202022-11-13%20111837.jpg" />
+            <Image url="@../img/Screenshot%202022-11-13%20111837.jpg" />
          </image>
       </ImageView>
    </children>

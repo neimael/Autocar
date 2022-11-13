@@ -11,7 +11,7 @@
    <children>
       <ImageView fitHeight="289.0" fitWidth="242.0" layoutX="14.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../images/ghfhf.png" />
+            <Image url="@../img/ghfhf.png" />
          </image>
       </ImageView>
       <Button layoutX="392.0" layoutY="238.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="168.0" style="-fx-background-color: #06042b; -fx-background-radius: 20;" text="Ticket lost" textFill="WHITE">
@@ -21,12 +21,12 @@
       </Button>
       <ImageView fitHeight="71.0" fitWidth="68.0" layoutX="321.0" layoutY="223.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../images/de.png" />
+            <Image url="@../img/de.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="71.0" fitWidth="68.0" layoutX="488.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../images/iguir.png" />
+            <Image url="@../img/iguir.png" />
          </image>
       </ImageView>
       <Button layoutX="317.0" layoutY="180.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="168.0" style="-fx-background-color: #06042b; -fx-background-radius: 20;" text="New travel" textFill="WHITE">
