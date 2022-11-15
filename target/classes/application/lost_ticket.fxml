@@ -46,7 +46,7 @@
             <Font name="Arial" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="189.0" layoutY="259.0" text="Your ticket is available !" textFill="RED">
+      <Label layoutX="189.0" layoutY="259.0" text="Your ticket is available !">
          <font>
             <Font name="Arial Bold" size="18.0" />
          </font>
