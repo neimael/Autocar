@@ -8,8 +8,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #4072cf;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="code" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #4072cf;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.paiementController">
    <children>
       <ImageView fitHeight="438.0" fitWidth="444.0" layoutX="-44.0" layoutY="-38.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -29,7 +28,7 @@
             <InnerShadow color="#b6a7a7" />
          </effect>
       </Text>
-      <Button layoutX="461.0" layoutY="255.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="81.0" style="-fx-background-color: #ffffff;" text="Insert" textAlignment="CENTER" textFill="#4072cf">
+      <Button layoutX="461.0" layoutY="255.0" mnemonicParsing="false" onAction="#insert_function" prefHeight="38.0" prefWidth="81.0" style="-fx-background-color: #ffffff;" text="Insert" textAlignment="CENTER" textFill="#4072cf">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
