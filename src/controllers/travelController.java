@@ -8,6 +8,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -41,6 +42,22 @@ public class travelController {
     		fxml = FXMLLoader.load(getClass().getResource("/application/paiement.fxml"));
     		Scene scene = new Scene(fxml);
     		choice.setScene(scene);
+    		choice.setResizable(false);
+    		choice.show();
+    	} catch(IOException e) {
+    		e.printStackTrace();
+    	}
+    }
+    
+    @FXML
+    void back(MouseEvent event) {
+    	result_travel.getScene().getWindow().hide();
+    	Stage choice = new Stage();
+    	try {
+    		fxml = FXMLLoader.load(getClass().getResource("/application/SearchTravel.fxml"));
+    		Scene scene = new Scene(fxml);
+    		choice.setScene(scene);
+    		choice.setResizable(false);
     		choice.show();
     	} catch(IOException e) {
     		e.printStackTrace();

@@ -20,6 +20,7 @@ public class ChoiceController {
     		fxml = FXMLLoader.load(getClass().getResource("/application/SearchTravel.fxml"));
     		Scene scene = new Scene(fxml);
     		choice.setScene(scene);
+    		choice.setResizable(false);
     		choice.show();
     	} catch(IOException e) {
     		e.printStackTrace();
@@ -40,11 +41,27 @@ public class ChoiceController {
     		fxml = FXMLLoader.load(getClass().getResource("/application/lost_ticket.fxml"));
     		Scene scene = new Scene(fxml);
     		choice.setScene(scene);
+    		choice.setResizable(false);
     		choice.show();
     	} catch(IOException e) {
     		e.printStackTrace();
     	}
 			
 	    	
+    }
+    
+    @FXML
+    void back(ActionEvent event) {
+    	choiceI.getScene().getWindow().hide();
+    	Stage choice = new Stage();
+    	try {
+    		fxml = FXMLLoader.load(getClass().getResource("/application/SignIn.fxml"));
+    		Scene scene = new Scene(fxml);
+    		choice.setScene(scene);
+    		choice.setResizable(false);
+    		choice.show();
+    	} catch(IOException e) {
+    		e.printStackTrace();
+    	}
     }
 }

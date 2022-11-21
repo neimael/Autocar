@@ -39,5 +39,14 @@
             <Font name="Arial Bold" size="27.0" />
          </font>
       </Label>
+      <Button mnemonicParsing="false" onAction="#back" prefHeight="47.0" prefWidth="55.0" style="-fx-background-color: #ffffff;">
+         <graphic>
+            <ImageView fitHeight="38.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icons8-flèche-répondre-50.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
    </children>
 </AnchorPane>

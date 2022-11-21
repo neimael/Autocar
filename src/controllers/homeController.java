@@ -25,6 +25,7 @@ public class homeController {
     		fxml = FXMLLoader.load(getClass().getResource("/application/SignIn.fxml"));
     		Scene scene = new Scene(fxml);
     		choice.setScene(scene);
+    		choice.setResizable(false);
     		choice.show();
     	} catch(IOException e) {
     		e.printStackTrace();

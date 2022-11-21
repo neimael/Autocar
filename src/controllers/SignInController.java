@@ -31,12 +31,28 @@ public class SignInController {
     		fxml = FXMLLoader.load(getClass().getResource("/application/Choice.fxml"));
     		Scene scene = new Scene(fxml);
     		choice.setScene(scene);
+    		choice.setResizable(false);
     		choice.show();
     	} catch(IOException e) {
     		e.printStackTrace();
     	}
     }
-
+    
+    @FXML
+    void back(ActionEvent event) {
+    	sign_in.getScene().getWindow().hide();
+    	Stage choice = new Stage();
+    	try {
+    		fxml = FXMLLoader.load(getClass().getResource("/application/home.fxml"));
+    		Scene scene = new Scene(fxml);
+    		choice.setScene(scene);
+    		choice.setResizable(false);
+    		choice.show();
+    	} catch(IOException e) {
+    		e.printStackTrace();
+    	}
+    }
+    
     @FXML
     void signUp(ActionEvent event) {
     	sign_in.getScene().getWindow().hide();
@@ -44,6 +60,7 @@ public class SignInController {
     	try {
     		fxml = FXMLLoader.load(getClass().getResource("/application/SignUp.fxml"));
     		Scene scene = new Scene(fxml);
+    		choice.setResizable(false);
     		choice.setScene(scene);
     		choice.show();
     	} catch(IOException e) {
