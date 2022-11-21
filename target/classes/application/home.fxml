@@ -5,14 +5,19 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="home" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="406.0" prefWidth="722.0" styleClass="home" stylesheets="@application.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.homeController">
+<AnchorPane fx:id="home" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="406.0" prefWidth="719.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.homeController">
    <children>
+      <ImageView fitHeight="406.0" fitWidth="736.0" layoutX="-3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/back.png" />
+         </image>
+      </ImageView>
       <ImageView fitHeight="112.0" fitWidth="297.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/Screenshot%202022-11-13%20112045.jpg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="292.0" fitWidth="438.0" layoutX="276.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="57.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="57.0">
+      <ImageView fitHeight="292.0" fitWidth="438.0" layoutX="276.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/WhatsApp_Image_2022-10-22_at_12.54.26-removebg-preview.png" />
          </image>
