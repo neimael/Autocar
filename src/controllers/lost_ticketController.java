@@ -12,6 +12,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class lost_ticketController {
 	@FXML
@@ -41,6 +42,7 @@ public class lost_ticketController {
     	try {
     		fxml = FXMLLoader.load(getClass().getResource("/application/Choice.fxml"));
     		Scene scene = new Scene(fxml);
+    		choice.initStyle(StageStyle.UNDECORATED);
     		choice.setScene(scene);
     		choice.setResizable(false);
     		choice.show();
