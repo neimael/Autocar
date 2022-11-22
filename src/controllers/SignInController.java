@@ -1,7 +1,14 @@
 package controllers;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
+import javax.swing.JOptionPane;
+
+import ConnectionDB.ControlDB;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -48,24 +55,55 @@ public class SignInController {
     @FXML
     private ImageView show_pass;
     
+    private Connection conn;
+    private PreparedStatement statement;
+    private ResultSet result;
+    
     @FXML
     private AnchorPane sign_in;
 	private Parent fxml;
 
     @FXML
-    void signIn(ActionEvent event) {
-    	sign_in.getScene().getWindow().hide();
+    void signIn(ActionEvent event) throws SQLException {
+    	
     	Stage choice = new Stage();
-    	try {
-    		fxml = FXMLLoader.load(getClass().getResource("/application/Choice.fxml"));
-    		Scene scene = new Scene(fxml);
-    		choice.setScene(scene);
-    		choice.initStyle(StageStyle.UNDECORATED);
-    		choice.setResizable(false);
-    		choice.show();
-    	} catch(IOException e) {
-    		e.printStackTrace();
-    	}
+    	
+    	conn = ControlDB.createConnection();
+    	
+    	String sql = "SELECT Cin,password FROM client WHERE Cin = ? and password = ?";
+		
+		 statement = conn.prepareStatement(sql);
+		 statement.setString(1,cin.getText());
+		 statement.setString(2, password.getText());
+		 result = statement.executeQuery();
+		 
+		 if(result.next()) {
+			 
+			 
+			 try {
+				 JOptionPane.showMessageDialog(null, "Successfully Login !", "Success Message",JOptionPane.INFORMATION_MESSAGE);
+		    		fxml = FXMLLoader.load(getClass().getResource("/application/Choice.fxml"));
+		    		Scene scene = new Scene(fxml);
+		    		 sign_in.getScene().getWindow().hide();
+		    		choice.setScene(scene);
+		    		choice.initStyle(StageStyle.UNDECORATED);
+		    		choice.setResizable(false);
+		    		choice.show();
+		    	} catch(IOException e) {
+		    		e.printStackTrace();
+		    	}
+			
+		    	
+		 }
+		 else {
+			 JOptionPane.showMessageDialog(null, "Wrong Password/CIN !", "Error Message",JOptionPane.INFORMATION_MESSAGE);
+		 }
+		 
+		 
+		 
+		 
+    	
+    	
     }
     
     @FXML

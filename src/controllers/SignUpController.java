@@ -1,7 +1,13 @@
 package controllers;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
+import javax.swing.JOptionPane;
+
+import ConnectionDB.ControlDB;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -44,6 +50,9 @@ public class SignUpController {
     @FXML
     private TextField phone_number;
 
+    private Connection conn;
+    private PreparedStatement statement;
+    
     @FXML
     private AnchorPane sign_up;
 
@@ -64,10 +73,28 @@ public class SignUpController {
     }
 
     @FXML
-    void signUp(ActionEvent event) {
-    	sign_up.getScene().getWindow().hide();
+    void signUp(ActionEvent event) throws SQLException {
+    	
     	Stage choice = new Stage();
     	try {
+    		
+    		 conn = ControlDB.createConnection();
+    		 
+    		 String Name = name.getText();
+    		 String CIN = cin.getText();
+    		 int Phone = Integer.parseInt(phone_number.getText());
+    		 String Email = email.getText();
+    		 String Password = password.getText();
+    		 
+    		 
+    		 String sql = "INSERT INTO client (name,Cin,Tele,Email,password) VALUES('"+Name+"','"+CIN+"','"+Phone+"','"+Email+"','"+Password+"')";
+    		
+    		 statement = conn.prepareStatement(sql);
+    		 statement.execute();
+    		 
+    		 JOptionPane.showMessageDialog(null, "Successfully Create new Account !", "Success Message",JOptionPane.INFORMATION_MESSAGE);
+    		 
+    		
     		fxml = FXMLLoader.load(getClass().getResource("/application/Choice.fxml"));
     		Scene scene = new Scene(fxml);
     		choice.setScene(scene);
@@ -77,6 +104,7 @@ public class SignUpController {
     	} catch(IOException e) {
     		e.printStackTrace();
     	}
+    	sign_up.getScene().getWindow().hide();
     }
     
     @FXML
