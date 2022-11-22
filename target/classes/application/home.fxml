@@ -5,29 +5,29 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="home" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.homeController">
+<AnchorPane fx:id="home" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="406.0" prefWidth="719.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.homeController">
    <children>
-      <ImageView fitHeight="410.0" fitWidth="733.0" layoutX="-129.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="406.0" fitWidth="736.0" layoutX="-3.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../img/Black%20and%20White%20Green%20Blue%20Basic%20Flow%20Chart%20Brainstorm%20Presentation%20(4).png" />
+            <Image url="@../img/back.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="107.0" fitWidth="275.0" layoutX="-12.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="112.0" fitWidth="297.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/Screenshot%202022-11-13%20112045.jpg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="259.0" fitWidth="404.0" layoutX="233.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="292.0" fitWidth="438.0" layoutX="276.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/WhatsApp_Image_2022-10-22_at_12.54.26-removebg-preview.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="116.0" fitWidth="117.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="116.0" fitWidth="117.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="-0.22222900390625" AnchorPane.topAnchor="0.0">
          <image>
             <Image url="@../img/Screenshot%202022-11-13%20111837.jpg" />
          </image>
       </ImageView>
-      <Button layoutX="538.0" layoutY="353.0" mnemonicParsing="false" onAction="#next" prefHeight="45.0" prefWidth="55.0" style="-fx-background-color: #4072cf;">
+      <Button layoutX="639.0" layoutY="340.0" mnemonicParsing="false" onAction="#next" prefHeight="55.0" prefWidth="83.0" style="-fx-background-color: #4072cf;" AnchorPane.bottomAnchor="11.0" AnchorPane.rightAnchor="0.0">
          <graphic>
             <ImageView fitHeight="39.0" fitWidth="109.0" pickOnBounds="true" preserveRatio="true">
                <image>

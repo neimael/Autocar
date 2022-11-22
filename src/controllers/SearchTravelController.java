@@ -12,6 +12,7 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.Spinner;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class SearchTravelController {
 
@@ -39,7 +40,25 @@ public class SearchTravelController {
     	try {
     		fxml = FXMLLoader.load(getClass().getResource("/application/travel.fxml"));
     		Scene scene = new Scene(fxml);
+    		choice.initStyle(StageStyle.UNDECORATED);
     		choice.setScene(scene);
+    		choice.setResizable(false);
+    		choice.show();
+    	} catch(IOException e) {
+    		e.printStackTrace();
+    	}
+    }
+    
+    @FXML
+    void back(ActionEvent event) {
+    	searchT.getScene().getWindow().hide();
+    	Stage choice = new Stage();
+    	try {
+    		fxml = FXMLLoader.load(getClass().getResource("/application/Choice.fxml"));
+    		Scene scene = new Scene(fxml);
+    		choice.initStyle(StageStyle.UNDECORATED);
+    		choice.setScene(scene);
+    		choice.setResizable(false);
     		choice.show();
     	} catch(IOException e) {
     		e.printStackTrace();

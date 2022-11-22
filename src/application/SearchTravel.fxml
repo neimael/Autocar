@@ -19,6 +19,15 @@
                   <Image url="@../img/undraw_Travel_mode_re_2lxo__1_-removebg-preview.png" />
                </image>
             </ImageView>
+            <Button mnemonicParsing="false" onAction="#back" prefHeight="47.0" prefWidth="55.0" style="-fx-background-color: #ffffff;">
+               <graphic>
+                  <ImageView fitHeight="38.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icons8-flèche-répondre-50.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
          </children>
       </AnchorPane>
       <AnchorPane layoutX="234.0" prefHeight="400.0" prefWidth="366.0" style="-fx-background-color: #4072CF;">
