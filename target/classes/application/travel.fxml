@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="result_travel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.travelController">
    <children>
       <ImageView fitHeight="484.0" fitWidth="750.0" layoutX="-74.0" layoutY="-11.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -22,14 +22,14 @@
       </ImageView>
       <TableView layoutX="24.0" layoutY="112.0" prefHeight="177.0" prefWidth="553.0" style="-fx-background-color: #D8D5FB;">
         <columns>
-            <TableColumn prefWidth="121.0" style="-fx-background-color: #4072CF;" text="Name of company" />
-            <TableColumn prefWidth="106.0" style="-fx-background-color: #4072CF;" text="Route" />
-          <TableColumn prefWidth="118.0" style="-fx-background-color: #4072CF;" text="Departure time" />
-          <TableColumn prefWidth="117.0" style="-fx-background-color: #4072CF;" text="Arriving time" />
-            <TableColumn prefWidth="90.0" style="-fx-background-color: #4072CF;" text="Price" />
+            <TableColumn fx:id="name_company" prefWidth="121.0" style="-fx-background-color: #4072CF;" text="Name of company" />
+            <TableColumn fx:id="route" prefWidth="106.0" style="-fx-background-color: #4072CF;" text="Route" />
+          <TableColumn fx:id="dep_time" prefWidth="118.0" style="-fx-background-color: #4072CF;" text="Departure time" />
+          <TableColumn fx:id="arr_time" prefWidth="117.0" style="-fx-background-color: #4072CF;" text="Arriving time" />
+            <TableColumn fx:id="price" prefWidth="90.0" style="-fx-background-color: #4072CF;" text="Price" />
         </columns>
       </TableView>
-      <Button layoutX="247.0" layoutY="324.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="107.0" style="-fx-background-color: #4072CF;" text="Reserve">
+      <Button layoutX="247.0" layoutY="324.0" mnemonicParsing="false" onAction="#reserver" prefHeight="37.0" prefWidth="107.0" style="-fx-background-color: #4072CF;" text="Reserve">
          <font>
             <Font name="Arial Bold" size="13.0" />
          </font>
@@ -39,5 +39,10 @@
             <Font name="Arial Bold" size="24.0" />
          </font>
       </Label>
+      <ImageView accessibleRole="BUTTON" fitHeight="38.0" fitWidth="37.0" layoutX="9.0" layoutY="5.0" onMousePressed="#back" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/icons8-flèche-répondre-50%20(1).png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

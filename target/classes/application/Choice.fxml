@@ -7,14 +7,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ffff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="choiceI" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ffff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ChoiceController">
    <children>
       <ImageView fitHeight="289.0" fitWidth="242.0" layoutX="14.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/ghfhf.png" />
          </image>
       </ImageView>
-      <Button layoutX="392.0" layoutY="238.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="168.0" style="-fx-background-color: #06042b; -fx-background-radius: 20;" text="Ticket lost" textFill="WHITE">
+      <Button layoutX="392.0" layoutY="238.0" mnemonicParsing="false" onAction="#ticket_lost" prefHeight="40.0" prefWidth="168.0" style="-fx-background-color: #06042b; -fx-background-radius: 20;" text="Ticket lost" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="14.0" />
          </font>
@@ -29,7 +29,7 @@
             <Image url="@../img/iguir.png" />
          </image>
       </ImageView>
-      <Button layoutX="317.0" layoutY="180.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="168.0" style="-fx-background-color: #06042b; -fx-background-radius: 20;" text="New travel" textFill="WHITE">
+      <Button layoutX="317.0" layoutY="180.0" mnemonicParsing="false" onAction="#new_travel" prefHeight="40.0" prefWidth="168.0" style="-fx-background-color: #06042b; -fx-background-radius: 20;" text="New travel" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="14.0" />
          </font>
@@ -39,5 +39,14 @@
             <Font name="Arial Bold" size="27.0" />
          </font>
       </Label>
+      <Button mnemonicParsing="false" onAction="#back" prefHeight="47.0" prefWidth="55.0" style="-fx-background-color: #ffffff;">
+         <graphic>
+            <ImageView fitHeight="38.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icons8-flèche-répondre-50.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
    </children>
 </AnchorPane>

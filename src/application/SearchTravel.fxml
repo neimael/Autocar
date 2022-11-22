@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="searchT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SearchTravelController">
    <children>
       <AnchorPane prefHeight="400.0" prefWidth="279.0" style="-fx-background-color: #ffff;">
          <children>
@@ -19,6 +19,15 @@
                   <Image url="@../img/undraw_Travel_mode_re_2lxo__1_-removebg-preview.png" />
                </image>
             </ImageView>
+            <Button mnemonicParsing="false" onAction="#back" prefHeight="47.0" prefWidth="55.0" style="-fx-background-color: #ffffff;">
+               <graphic>
+                  <ImageView fitHeight="38.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icons8-flèche-répondre-50.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
          </children>
       </AnchorPane>
       <AnchorPane layoutX="234.0" prefHeight="400.0" prefWidth="366.0" style="-fx-background-color: #4072CF;">
@@ -42,11 +51,11 @@
                   <Font name="Arial Black" size="13.0" />
                </font>
             </Label>
-            <DatePicker layoutX="194.0" layoutY="198.0" prefHeight="25.0" prefWidth="149.0" />
-            <ChoiceBox layoutX="194.0" layoutY="119.0" prefWidth="150.0" />
-            <ChoiceBox layoutX="194.0" layoutY="159.0" prefWidth="150.0" />
-            <Spinner layoutX="194.0" layoutY="241.0" />
-            <Button layoutX="19.0" layoutY="315.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="325.0" style="-fx-background-color: #06042b;" text="Search" textFill="WHITE">
+            <DatePicker fx:id="date_travel" layoutX="194.0" layoutY="198.0" prefHeight="25.0" prefWidth="149.0" />
+            <ChoiceBox fx:id="dep_city" layoutX="194.0" layoutY="119.0" prefWidth="150.0" />
+            <ChoiceBox fx:id="arr_city" layoutX="194.0" layoutY="159.0" prefWidth="150.0" />
+            <Spinner fx:id="num_ticket" layoutX="194.0" layoutY="241.0" />
+            <Button layoutX="19.0" layoutY="315.0" mnemonicParsing="false" onAction="#search_travel" prefHeight="34.0" prefWidth="325.0" style="-fx-background-color: #06042b;" text="Search" textFill="WHITE">
                <font>
                   <Font name="Bell MT Bold" size="16.0" />
                </font>
