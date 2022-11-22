@@ -11,6 +11,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class CodePinController {
 
@@ -34,6 +35,7 @@ public class CodePinController {
 	    		fxml = FXMLLoader.load(getClass().getResource("/application/paiement.fxml"));
 	    		Scene scene = new Scene(fxml);
 	    		choice.setScene(scene);
+	    		choice.initStyle(StageStyle.UNDECORATED);
 	    		choice.setResizable(false);
 	    		choice.show();
 	    	} catch(IOException e) {

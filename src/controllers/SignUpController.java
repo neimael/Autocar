@@ -14,6 +14,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class SignUpController {
 
@@ -55,6 +56,7 @@ public class SignUpController {
     		Scene scene = new Scene(fxml);
     		choice.setScene(scene);
     		choice.setResizable(false);
+    		choice.initStyle(StageStyle.UNDECORATED);
     		choice.show();
     	} catch(IOException e) {
     		e.printStackTrace();
@@ -69,6 +71,7 @@ public class SignUpController {
     		fxml = FXMLLoader.load(getClass().getResource("/application/Choice.fxml"));
     		Scene scene = new Scene(fxml);
     		choice.setScene(scene);
+    		choice.initStyle(StageStyle.UNDECORATED);
     		choice.setResizable(false);
     		choice.show();
     	} catch(IOException e) {

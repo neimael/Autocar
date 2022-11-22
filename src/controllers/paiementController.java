@@ -10,6 +10,7 @@ import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class paiementController {
 
@@ -27,6 +28,7 @@ public class paiementController {
     		Scene scene = new Scene(fxml);
     		choice.setScene(scene);
     		choice.setResizable(false);
+    		choice.initStyle(StageStyle.UNDECORATED);
     		choice.show();
     	} catch(IOException e) {
     		e.printStackTrace();
