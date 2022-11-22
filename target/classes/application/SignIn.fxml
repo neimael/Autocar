@@ -23,9 +23,9 @@
             <Font name="Arial Bold" size="18.0" />
          </font>
       </Label>
-      <TextField editable="false" layoutX="144.0" layoutY="191.0" prefHeight="38.0" prefWidth="43.0" style="-fx-background-color: d3dbe3;" />
       <TextField fx:id="cin" layoutX="185.0" layoutY="140.0" prefHeight="38.0" prefWidth="273.0" promptText="Enter your CIN" style="-fx-background-color: EDF2F7;" />
-      <PasswordField fx:id="password" layoutX="186.0" layoutY="191.0" prefHeight="38.0" prefWidth="274.0" promptText="Enter your Password" style="-fx-background-color: EDF2F7;" />
+      <PasswordField fx:id="password" layoutX="187.0" layoutY="191.0" prefHeight="38.0" prefWidth="273.0" promptText="Enter your Password" style="-fx-background-color: EDF2F7;" />
+      <TextField editable="false" layoutX="144.0" layoutY="191.0" prefHeight="38.0" prefWidth="43.0" style="-fx-background-color: d3dbe3;" />
       <Button layoutX="144.0" layoutY="246.0" mnemonicParsing="false" onAction="#signIn" prefHeight="38.0" prefWidth="315.0" style="-fx-background-color: #4072cf;" text="Sign In" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="16.0" />
