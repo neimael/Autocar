@@ -40,7 +40,7 @@ public class travelController {
     	result_travel.getScene().getWindow().hide();
     	Stage choice = new Stage();
     	try {
-    		fxml = FXMLLoader.load(getClass().getResource("/application/paiement.fxml"));
+    		fxml = FXMLLoader.load(getClass().getResource("/application/latest_travel.fxml"));
     		Scene scene = new Scene(fxml);
     		choice.setScene(scene);
     		choice.setResizable(false);
