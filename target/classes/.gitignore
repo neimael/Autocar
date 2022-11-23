@@ -1,14 +1,3 @@
-/.classpath
-/.idea/
-/.project
-/.settings/
-/ConnectionDB/
-/Model/
 /application/
-/autocar.sql
-/bin/
-/build.fxbuild
-/controllers/
 /img/
-/pom.xml
 /target/
