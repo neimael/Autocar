@@ -15,7 +15,7 @@
             <Image url="@../img/tatata-removebg-preview.png" />
          </image>
       </ImageView>
-      <TextField fx:id="card_number" layoutX="192.0" layoutY="169.0" prefHeight="44.0" prefWidth="254.0" promptText="Card Number">
+      <TextField fx:id="card_number" focusTraversable="false" layoutX="192.0" layoutY="169.0" prefHeight="44.0" prefWidth="254.0" promptText="Card Number" style="-fx-background-color: EDF2F7;">
          <font>
             <Font name="Arial" size="15.0" />
          </font>
@@ -33,7 +33,7 @@
             <Image url="@../img/icons8-flèche-répondre-50.png" />
          </image>
       </ImageView>
-      <TextField fx:id="card_code" layoutX="192.0" layoutY="213.0" prefHeight="44.0" prefWidth="254.0" promptText="Card Security Code">
+      <TextField fx:id="card_code" layoutX="192.0" layoutY="213.0" prefHeight="44.0" prefWidth="254.0" promptText="Card Security Code" style="-fx-background-color: EDF2F7;">
          <font>
             <Font name="Arial" size="15.0" />
          </font>

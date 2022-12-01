@@ -85,7 +85,7 @@ public class SignUpController {
 		 
 		 String Name = name.getText();
 		 String CIN = cin.getText();
-		 int Phone = Integer.parseInt(phone_number.getText());
+		 String Phone = phone_number.getText();
 		 String Email = email.getText();
 		 String Password = password.getText();
 		 
@@ -93,8 +93,11 @@ public class SignUpController {
 		 statement = conn.prepareStatement(check);
 		 statement.setString(1,cin.getText());
 		 result = statement.executeQuery();
-    	
-    	if (result.next()) {
+		 
+    	if (Name.trim().isEmpty() || CIN.trim().isEmpty() || Password.trim().isEmpty() || Phone.trim().isEmpty() || Email.trim().isEmpty()) {
+    		JOptionPane.showMessageDialog(null, "Please Enter all of your informations !", "Error Message",JOptionPane.ERROR_MESSAGE);
+    	}
+    	else if (result.next()) {
     		JOptionPane.showMessageDialog(null, "CIN Already exists !", "Error Message",JOptionPane.ERROR_MESSAGE);
     	}
     	else {
