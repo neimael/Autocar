@@ -87,7 +87,7 @@ public class SignInController {
 		    		 sign_in.getScene().getWindow().hide();
 		    		choice.setScene(scene);
 		    		choice.initStyle(StageStyle.UNDECORATED);
-		    		Image image = new Image("img/WhatsApp_Image_2022-10-22_at_12.54.26-removebg-preview.png");
+		    		Image image = new Image("img/icon.png");
 					choice.getIcons().add(image);
 		    		choice.setResizable(false);
 		    		choice.show();
@@ -98,7 +98,7 @@ public class SignInController {
 		    	
 		 }
 		 else {
-			 JOptionPane.showMessageDialog(null, "Wrong Password/CIN !", "Error Message",JOptionPane.INFORMATION_MESSAGE);
+			 JOptionPane.showMessageDialog(null, "Wrong Password/CIN !", "Error Message",JOptionPane.ERROR_MESSAGE);
 		 }
 		 
 		 
@@ -117,7 +117,7 @@ public class SignInController {
     		Scene scene = new Scene(fxml);
     		choice.initStyle(StageStyle.UNDECORATED);
     		choice.setScene(scene);
-    		Image image = new Image("img/WhatsApp_Image_2022-10-22_at_12.54.26-removebg-preview.png");
+    		Image image = new Image("img/icon.png");
 			choice.getIcons().add(image);
     		choice.setResizable(false);
     		choice.show();
@@ -135,7 +135,7 @@ public class SignInController {
     		Scene scene = new Scene(fxml);
     		choice.initStyle(StageStyle.UNDECORATED);
     		choice.setResizable(false);
-    		Image image = new Image("img/WhatsApp_Image_2022-10-22_at_12.54.26-removebg-preview.png");
+    		Image image = new Image("img/icon.png");
 			choice.getIcons().add(image);
     		choice.setScene(scene);
     		choice.show();

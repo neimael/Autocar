@@ -42,7 +42,7 @@ public class latest_travelController {
     		Scene scene = new Scene(fxml);
     		choice.setScene(scene);
     		choice.setResizable(false);
-    		Image image = new Image("img/WhatsApp_Image_2022-10-22_at_12.54.26-removebg-preview.png");
+    		Image image = new Image("img/icon.png");
 			choice.getIcons().add(image);
     		choice.initStyle(StageStyle.UNDECORATED);
     		choice.show();
@@ -59,6 +59,8 @@ public class latest_travelController {
     		fxml = FXMLLoader.load(getClass().getResource("/application/travel.fxml"));
     		Scene scene = new Scene(fxml);
     		choice.setScene(scene);
+    		Image image = new Image("img/icon.png");
+			choice.getIcons().add(image);
     		choice.initStyle(StageStyle.UNDECORATED);
     		choice.setResizable(false);
     		choice.show();

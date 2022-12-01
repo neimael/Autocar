@@ -45,7 +45,7 @@ public class lost_ticketController {
     		Scene scene = new Scene(fxml);
     		choice.initStyle(StageStyle.UNDECORATED);
     		choice.setScene(scene);
-    		Image image = new Image("img/WhatsApp_Image_2022-10-22_at_12.54.26-removebg-preview.png");
+    		Image image = new Image("img/icon.png");
 			choice.getIcons().add(image);
     		choice.setResizable(false);
     		choice.show();

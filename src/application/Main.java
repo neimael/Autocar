@@ -15,7 +15,7 @@ public class Main extends Application {
 		try {
 			Parent root = FXMLLoader.load(getClass().getResource("home.fxml"));
 			Scene scene = new Scene(root);
-			Image image = new Image("img/WhatsApp_Image_2022-10-22_at_12.54.26-removebg-preview.png");
+			Image image = new Image("img/icon.png");
 			primaryStage.getIcons().add(image);
 			primaryStage.setScene(scene);
 			primaryStage.setResizable(false);
