@@ -64,6 +64,8 @@ public class SignUpController {
     		fxml = FXMLLoader.load(getClass().getResource("/application/SignIn.fxml"));
     		Scene scene = new Scene(fxml);
     		choice.setScene(scene);
+    		Image image = new Image("img/WhatsApp_Image_2022-10-22_at_12.54.26-removebg-preview.png");
+			choice.getIcons().add(image);
     		choice.setResizable(false);
     		choice.initStyle(StageStyle.UNDECORATED);
     		choice.show();
@@ -97,6 +99,8 @@ public class SignUpController {
     		
     		fxml = FXMLLoader.load(getClass().getResource("/application/Choice.fxml"));
     		Scene scene = new Scene(fxml);
+    		Image image = new Image("img/WhatsApp_Image_2022-10-22_at_12.54.26-removebg-preview.png");
+			choice.getIcons().add(image);
     		choice.setScene(scene);
     		choice.initStyle(StageStyle.UNDECORATED);
     		choice.setResizable(false);

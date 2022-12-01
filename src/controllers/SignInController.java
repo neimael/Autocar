@@ -87,6 +87,8 @@ public class SignInController {
 		    		 sign_in.getScene().getWindow().hide();
 		    		choice.setScene(scene);
 		    		choice.initStyle(StageStyle.UNDECORATED);
+		    		Image image = new Image("img/WhatsApp_Image_2022-10-22_at_12.54.26-removebg-preview.png");
+					choice.getIcons().add(image);
 		    		choice.setResizable(false);
 		    		choice.show();
 		    	} catch(IOException e) {
@@ -115,6 +117,8 @@ public class SignInController {
     		Scene scene = new Scene(fxml);
     		choice.initStyle(StageStyle.UNDECORATED);
     		choice.setScene(scene);
+    		Image image = new Image("img/WhatsApp_Image_2022-10-22_at_12.54.26-removebg-preview.png");
+			choice.getIcons().add(image);
     		choice.setResizable(false);
     		choice.show();
     	} catch(IOException e) {
@@ -131,6 +135,8 @@ public class SignInController {
     		Scene scene = new Scene(fxml);
     		choice.initStyle(StageStyle.UNDECORATED);
     		choice.setResizable(false);
+    		Image image = new Image("img/WhatsApp_Image_2022-10-22_at_12.54.26-removebg-preview.png");
+			choice.getIcons().add(image);
     		choice.setScene(scene);
     		choice.show();
     	} catch(IOException e) {
