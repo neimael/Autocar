@@ -1,79 +1,77 @@
 package Model;
 
 public class Client {
-    protected int id_sign;
-	protected String CIN;
-	protected String prenom;
-	protected String nom;
-	protected int Tele;
-	protected String Email;
+    
+	private String name;
+	private String cin;
+	private int phone;
+	private String email;
+	private String password;
 	
 	
-	public Client() {
-		
+	public Client(String name, String cin, int phone, String email, String password) {
+		super();
+		this.name = name;
+		this.cin = cin;
+		this.phone = phone;
+		this.email = email;
+		this.password = password;
 	}
-	public Client(int id_sign) {
-		
-		this.id_sign = id_sign;
-		
-	}
+
+
 	
-	
-	public Client(int id_sign, String cIN, String prenom, String nom, int tele, String email) {
-		
-		this.id_sign = id_sign;
-		CIN = cIN;
-		this.prenom = prenom;
-		this.nom = nom;
-		Tele = tele;
-		Email = email;
+	public String getName() {
+		return name;
 	}
-	
-	public Client(String cIN, String prenom, String nom, int tele, String email) {
-		
-		CIN = cIN;
-		this.prenom = prenom;
-		this.nom = nom;
-		Tele = tele;
-		Email = email;
+
+
+	public void setName(String name) {
+		this.name = name;
 	}
-	
-	public int getId_sign() {
-		return id_sign;
+
+
+	public String getCin() {
+		return cin;
 	}
-	public void setId_sign(int id_sign) {
-		this.id_sign = id_sign;
+
+
+	public void setCin(String cin) {
+		this.cin = cin;
 	}
-	public String getCIN() {
-		return CIN;
+
+
+	public int getPhone() {
+		return phone;
 	}
-	public void setCIN(String cIN) {
-		CIN = cIN;
+
+
+	public void setPhone(int phone) {
+		this.phone = phone;
 	}
-	public String getPrenom() {
-		return prenom;
-	}
-	public void setPrenom(String prenom) {
-		this.prenom = prenom;
-	}
-	public String getNom() {
-		return nom;
-	}
-	public void setNom(String nom) {
-		this.nom = nom;
-	}
-	public int getTele() {
-		return Tele;
-	}
-	public void setTele(int tele) {
-		Tele = tele;
-	}
+
+
 	public String getEmail() {
-		return Email;
+		return email;
 	}
+
+
 	public void setEmail(String email) {
-		Email = email;
+		this.email = email;
 	}
+
+
+	public String getPassword() {
+		return password;
+	}
+
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	
+	
+	
+	
 	
 	
 }

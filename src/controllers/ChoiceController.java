@@ -8,6 +8,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -16,11 +17,14 @@ public class ChoiceController {
 	@FXML
     void new_travel(ActionEvent event) {
 		choiceI.getScene().getWindow().hide();
+		Stage primaryStage = null;
     	Stage choice = new Stage();
     	try {
     		fxml = FXMLLoader.load(getClass().getResource("/application/SearchTravel.fxml"));
     		Scene scene = new Scene(fxml);
     		choice.setScene(scene);
+    		Image image = new Image("img/WhatsApp_Image_2022-10-22_at_12.54.26-removebg-preview.png");
+			choice.getIcons().add(image);
     		choice.initStyle(StageStyle.UNDECORATED);
     		choice.setResizable(false);
     		choice.show();
@@ -43,6 +47,8 @@ public class ChoiceController {
     		fxml = FXMLLoader.load(getClass().getResource("/application/lost_ticket.fxml"));
     		Scene scene = new Scene(fxml);
     		choice.setScene(scene);
+    		Image image = new Image("img/WhatsApp_Image_2022-10-22_at_12.54.26-removebg-preview.png");
+			choice.getIcons().add(image);
     		choice.initStyle(StageStyle.UNDECORATED);
     		choice.setResizable(false);
     		choice.show();

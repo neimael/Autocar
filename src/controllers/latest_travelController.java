@@ -14,6 +14,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
+import javafx.scene.image.Image;
 
 public class latest_travelController {
 	@FXML
@@ -41,6 +42,8 @@ public class latest_travelController {
     		Scene scene = new Scene(fxml);
     		choice.setScene(scene);
     		choice.setResizable(false);
+    		Image image = new Image("img/WhatsApp_Image_2022-10-22_at_12.54.26-removebg-preview.png");
+			choice.getIcons().add(image);
     		choice.initStyle(StageStyle.UNDECORATED);
     		choice.show();
     	} catch(IOException e) {

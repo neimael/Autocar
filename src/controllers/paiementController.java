@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -72,6 +73,8 @@ public class paiementController {
     		Scene scene = new Scene(fxml);
     		choice.initStyle(StageStyle.UNDECORATED);
     		choice.setScene(scene);
+    		Image image = new Image("img/WhatsApp_Image_2022-10-22_at_12.54.26-removebg-preview.png");
+			choice.getIcons().add(image);
     		choice.setResizable(false);
     		choice.show();
     	} catch(IOException e) {
