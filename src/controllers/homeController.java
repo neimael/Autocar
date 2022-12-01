@@ -27,7 +27,7 @@ public class homeController {
     		fxml = FXMLLoader.load(getClass().getResource("/application/SignIn.fxml"));
     		Scene scene = new Scene(fxml);
     		choice.initStyle(StageStyle.UNDECORATED);
-    		Image image = new Image("img/WhatsApp_Image_2022-10-22_at_12.54.26-removebg-preview.png");
+    		Image image = new Image("img/icon.png");
 			choice.getIcons().add(image);
     		choice.setScene(scene);
     		choice.setResizable(false);

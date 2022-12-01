@@ -3,6 +3,7 @@ package controllers;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import javax.swing.JOptionPane;
@@ -64,7 +65,7 @@ public class SignUpController {
     		fxml = FXMLLoader.load(getClass().getResource("/application/SignIn.fxml"));
     		Scene scene = new Scene(fxml);
     		choice.setScene(scene);
-    		Image image = new Image("img/WhatsApp_Image_2022-10-22_at_12.54.26-removebg-preview.png");
+    		Image image = new Image("img/icon.png");
 			choice.getIcons().add(image);
     		choice.setResizable(false);
     		choice.initStyle(StageStyle.UNDECORATED);
@@ -73,42 +74,54 @@ public class SignUpController {
     		e.printStackTrace();
     	}
     }
+    
+    private ResultSet result;
 
     @FXML
     void signUp(ActionEvent event) throws SQLException {
     	
     	Stage choice = new Stage();
-    	try {
-    		
-    		 conn = ControlDB.createConnection();
-    		 
-    		 String Name = name.getText();
-    		 String CIN = cin.getText();
-    		 int Phone = Integer.parseInt(phone_number.getText());
-    		 String Email = email.getText();
-    		 String Password = password.getText();
-    		 
-    		 
-    		 String sql = "INSERT INTO client (name,Cin,Tele,Email,password) VALUES('"+Name+"','"+CIN+"','"+Phone+"','"+Email+"','"+Password+"')";
-    		
-    		 statement = conn.prepareStatement(sql);
-    		 statement.execute();
-    		 
-    		 JOptionPane.showMessageDialog(null, "Successfully Create new Account !", "Success Message",JOptionPane.INFORMATION_MESSAGE);
-    		 
-    		
-    		fxml = FXMLLoader.load(getClass().getResource("/application/Choice.fxml"));
-    		Scene scene = new Scene(fxml);
-    		Image image = new Image("img/WhatsApp_Image_2022-10-22_at_12.54.26-removebg-preview.png");
-			choice.getIcons().add(image);
-    		choice.setScene(scene);
-    		choice.initStyle(StageStyle.UNDECORATED);
-    		choice.setResizable(false);
-    		choice.show();
-    	} catch(IOException e) {
-    		e.printStackTrace();
+    	conn = ControlDB.createConnection();
+		 
+		 String Name = name.getText();
+		 String CIN = cin.getText();
+		 int Phone = Integer.parseInt(phone_number.getText());
+		 String Email = email.getText();
+		 String Password = password.getText();
+		 
+		 String check = "SELECT Cin FROM client WHERE Cin = ?";
+		 statement = conn.prepareStatement(check);
+		 statement.setString(1,cin.getText());
+		 result = statement.executeQuery();
+    	
+    	if (result.next()) {
+    		JOptionPane.showMessageDialog(null, "CIN Already exists !", "Error Message",JOptionPane.ERROR_MESSAGE);
     	}
-    	sign_up.getScene().getWindow().hide();
+    	else {
+    		try {
+        		
+       		 String sql = "INSERT INTO client (name,Cin,Tele,Email,password) VALUES('"+Name+"','"+CIN+"','"+Phone+"','"+Email+"','"+Password+"')";
+       		
+       		 statement = conn.prepareStatement(sql);
+       		 statement.execute();
+       		 
+       		 JOptionPane.showMessageDialog(null, "Successfully Create new Account !", "Success Message",JOptionPane.INFORMATION_MESSAGE);
+       		 
+       		
+       		fxml = FXMLLoader.load(getClass().getResource("/application/Choice.fxml"));
+       		Scene scene = new Scene(fxml);
+       		Image image = new Image("img/icon.png");
+   			choice.getIcons().add(image);
+       		choice.setScene(scene);
+       		choice.initStyle(StageStyle.UNDECORATED);
+       		choice.setResizable(false);
+       		choice.show();
+       	} catch(IOException e) {
+       		e.printStackTrace();
+       	}
+       	sign_up.getScene().getWindow().hide();
+    	}
+    	
     }
     
     @FXML
