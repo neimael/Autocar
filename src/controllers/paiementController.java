@@ -48,8 +48,8 @@ public class paiementController {
     	String sql = "SELECT numCard,codepin FROM paiement WHERE numCard = ? and codepin = ?";
 		
 		 statement = conn.prepareStatement(sql);
-		 statement.setLong(1,Integer.parseInt(card_number.getText()));
-		 statement.setLong(2, Integer.parseInt(card_code.getText()));
+		 statement.setString(1,card_number.getText());
+		 statement.setString(2,card_code.getText());
 		 result = statement.executeQuery();
 		 
 		 if(result.next()) {
@@ -60,7 +60,7 @@ public class paiementController {
 		    	
 		 }
 		 else {
-			 JOptionPane.showMessageDialog(null, "Wrong Card number/code !", "Error Message",JOptionPane.INFORMATION_MESSAGE);
+			 JOptionPane.showMessageDialog(null, "Wrong Card number/code !", "Error Message",JOptionPane.ERROR_MESSAGE);
 		 }
 	}
 	// Event Listener on ImageView.onMousePressed
