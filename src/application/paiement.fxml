@@ -20,7 +20,7 @@
             <Font name="Arial" size="15.0" />
          </font>
       </TextField>
-      <Button layoutX="154.0" layoutY="272.0" mnemonicParsing="false" onAction="#insert_pin" prefHeight="44.0" prefWidth="295.0" style="-fx-background-color: #4072cf;" text="Insert PIN" textAlignment="CENTER" textFill="WHITE">
+      <Button layoutX="154.0" layoutY="272.0" mnemonicParsing="false" onAction="#insert_pin" prefHeight="44.0" prefWidth="295.0" style="-fx-background-color: #4072cf;" text="Print Ticket" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="16.0" />
          </font>
