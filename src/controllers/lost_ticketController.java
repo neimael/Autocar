@@ -9,6 +9,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -44,6 +45,8 @@ public class lost_ticketController {
     		Scene scene = new Scene(fxml);
     		choice.initStyle(StageStyle.UNDECORATED);
     		choice.setScene(scene);
+    		Image image = new Image("img/icon.png");
+			choice.getIcons().add(image);
     		choice.setResizable(false);
     		choice.show();
     	} catch(IOException e) {

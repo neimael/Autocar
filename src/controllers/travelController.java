@@ -8,6 +8,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
+import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -43,6 +44,8 @@ public class travelController {
     		fxml = FXMLLoader.load(getClass().getResource("/application/latest_travel.fxml"));
     		Scene scene = new Scene(fxml);
     		choice.setScene(scene);
+    		Image image = new Image("img/icon.png");
+			choice.getIcons().add(image);
     		choice.setResizable(false);
     		choice.initStyle(StageStyle.UNDECORATED);
     		choice.show();
@@ -59,6 +62,8 @@ public class travelController {
     		fxml = FXMLLoader.load(getClass().getResource("/application/SearchTravel.fxml"));
     		Scene scene = new Scene(fxml);
     		choice.setScene(scene);
+    		Image image = new Image("img/icon.png");
+			choice.getIcons().add(image);
     		choice.initStyle(StageStyle.UNDECORATED);
     		choice.setResizable(false);
     		choice.show();

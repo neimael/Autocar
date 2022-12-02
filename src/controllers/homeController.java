@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -26,6 +27,8 @@ public class homeController {
     		fxml = FXMLLoader.load(getClass().getResource("/application/SignIn.fxml"));
     		Scene scene = new Scene(fxml);
     		choice.initStyle(StageStyle.UNDECORATED);
+    		Image image = new Image("img/icon.png");
+			choice.getIcons().add(image);
     		choice.setScene(scene);
     		choice.setResizable(false);
     		choice.show();

@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -47,8 +48,8 @@ public class paiementController {
     	String sql = "SELECT numCard,codepin FROM paiement WHERE numCard = ? and codepin = ?";
 		
 		 statement = conn.prepareStatement(sql);
-		 statement.setLong(1,Integer.parseInt(card_number.getText()));
-		 statement.setLong(2, Integer.parseInt(card_code.getText()));
+		 statement.setString(1,card_number.getText());
+		 statement.setString(2,card_code.getText());
 		 result = statement.executeQuery();
 		 
 		 if(result.next()) {
@@ -59,7 +60,7 @@ public class paiementController {
 		    	
 		 }
 		 else {
-			 JOptionPane.showMessageDialog(null, "Wrong Card number/code !", "Error Message",JOptionPane.INFORMATION_MESSAGE);
+			 JOptionPane.showMessageDialog(null, "Wrong Card number/code !", "Error Message",JOptionPane.ERROR_MESSAGE);
 		 }
 	}
 	// Event Listener on ImageView.onMousePressed
@@ -72,6 +73,8 @@ public class paiementController {
     		Scene scene = new Scene(fxml);
     		choice.initStyle(StageStyle.UNDECORATED);
     		choice.setScene(scene);
+    		Image image = new Image("img/icon.png");
+			choice.getIcons().add(image);
     		choice.setResizable(false);
     		choice.show();
     	} catch(IOException e) {

@@ -6,6 +6,7 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 
 
 public class Main extends Application {
@@ -14,6 +15,8 @@ public class Main extends Application {
 		try {
 			Parent root = FXMLLoader.load(getClass().getResource("home.fxml"));
 			Scene scene = new Scene(root);
+			Image image = new Image("img/icon.png");
+			primaryStage.getIcons().add(image);
 			primaryStage.setScene(scene);
 			primaryStage.setResizable(false);
 			primaryStage.initStyle(StageStyle.UNDECORATED);
