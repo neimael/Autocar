@@ -1,5 +1,6 @@
 /application/
 /img/
-/target/
 /pdf_ticket/
+/target/
+/Model/
 /controllers/
