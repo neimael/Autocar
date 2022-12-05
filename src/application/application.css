@@ -1,1 +1,11 @@
-/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+.table-view .column-header {
+    -fx-background-color:  #4072CF;
+    -fx-size:2.5em 
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px 
+}
