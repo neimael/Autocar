@@ -16,6 +16,7 @@ public class ControlDB {
 	 {
 	         try
 	         {
+	        	 
 	        	 con = DriverManager.getConnection(url, username, password); //attempting to connect to MySQL database
 	        	 System.out.println("DataBase Connection succes ! ");
 	         } 

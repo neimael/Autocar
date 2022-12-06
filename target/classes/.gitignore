@@ -1,5 +1,6 @@
+/META-INF/
 /application/
 /img/
-/target/
 /pdf_ticket/
-/controllers/
+/target/
+/ConnectionDB/

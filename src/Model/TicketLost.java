@@ -5,10 +5,6 @@ public class TicketLost {
 		protected String CIN;
 		
 		
-		
-		
-		
-		
 		public TicketLost() {
 			
 		}
