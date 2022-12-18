@@ -104,7 +104,7 @@ public class travelController implements Initializable {
    		 	statement = conn.prepareStatement(sql);
    		 	statement.setString(1, Travel.getCity_dep());
    		 	statement.setString(2, Travel.getCiy_arr());
-   		 	statement.setObject(3, Travel.getDate_travel());
+   		 	statement.setString(3, Travel.getDate_travel().toString());
    		 	statement.setInt(4, Travel.getNum_places());
    		 	result = statement.executeQuery();
 		      

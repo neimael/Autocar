@@ -48,8 +48,10 @@ public class SearchTravelController implements Initializable{
     @FXML
     void search_travel(ActionEvent event) {
     	
-    	
-    	
+    	if(dep_city.getSelectionModel().isEmpty() || arr_city.getSelectionModel().isEmpty()) {
+			 JOptionPane.showMessageDialog(null, "You have to choose your destination !", "Error Message",JOptionPane.ERROR_MESSAGE);
+    	}
+    	else {
     	
     		String selected_dep = dep_city.getSelectionModel().getSelectedItem().toString();
     		Travel.setCity_dep(selected_dep);
@@ -67,6 +69,9 @@ public class SearchTravelController implements Initializable{
     		
     		if(selected_arr.equals(selected_dep)) {
 				 JOptionPane.showMessageDialog(null, "Departure City Shouldn't be the same As Arrival City !", "Error Message",JOptionPane.ERROR_MESSAGE);
+    		}
+    		else if(myDate == null) {
+				 JOptionPane.showMessageDialog(null, "Choose date of travel First !", "Error Message",JOptionPane.ERROR_MESSAGE);
     		}
     		else {
     			try {
@@ -86,7 +91,7 @@ public class SearchTravelController implements Initializable{
     			searchT.getScene().getWindow().hide();
     	    	
     			}
-    		
+    	}
     		
     		
     		
