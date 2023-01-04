@@ -28,5 +28,6 @@
 	<classpathentry kind="lib" path="C:/Users/EliteBook/Downloads/openjfx-19_windows-x64_bin-sdk (1)/javafx-sdk-19/lib/javafx-swt.jar"/>
 	<classpathentry kind="lib" path="C:/Users/EliteBook/Downloads/itextpdf-5.5.9.jar"/>
 	<classpathentry kind="lib" path="C:/Users/EliteBook/Downloads/mysql-connector-j-8.0.31/mysql-connector-j-8.0.31/mysql-connector-j-8.0.31.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

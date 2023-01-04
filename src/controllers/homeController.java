@@ -8,9 +8,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import controllers.CRUDController;
+
 
 public class homeController {
 
@@ -34,6 +37,25 @@ public class homeController {
     		choice.show();
     	} catch(IOException e) {
     		e.printStackTrace();
+    	}
+    }
+    
+
+    @FXML
+    void admin(ActionEvent event) {
+    	
+    	Stage choice = new Stage();
+    	try {
+    		fxml = FXMLLoader.load(getClass().getResource("/application/CRUDadmin.fxml"));
+    		Scene scene = new Scene(fxml);
+    		Image image = new Image("img/icon.png");
+			choice.getIcons().add(image);
+    		choice.setScene(scene);
+    		choice.setResizable(false);
+    		choice.show();
+    	} catch(IOException e) {
+    		e.printStackTrace();
+    		home.getScene().getWindow().hide();
     	}
     }
 

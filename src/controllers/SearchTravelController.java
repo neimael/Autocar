@@ -25,6 +25,9 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 public class SearchTravelController implements Initializable{
+	
+	@FXML
+    private AnchorPane searchT;
 
 	@FXML
     private ComboBox<String> arr_city;
@@ -38,8 +41,7 @@ public class SearchTravelController implements Initializable{
     @FXML
     private Spinner<Integer> num_ticket;
 
-    @FXML
-    private AnchorPane searchT;
+    
 
 	private Parent fxml;
 	
@@ -51,7 +53,7 @@ public class SearchTravelController implements Initializable{
     	
     	
     	
-    		String selected_dep = dep_city.getSelectionModel().getSelectedItem().toString();
+    	    String selected_dep = dep_city.getSelectionModel().getSelectedItem().toString();
     		Travel.setCity_dep(selected_dep);
     		
     		String selected_arr = arr_city.getSelectionModel().getSelectedItem().toString();
@@ -70,7 +72,7 @@ public class SearchTravelController implements Initializable{
     		}
     		else {
     			try {
-    				Stage choice = new Stage();
+    			Stage choice = new Stage();
     			fxml = FXMLLoader.load(getClass().getResource("/application/travel.fxml"));
         		Scene scene = new Scene(fxml);
         		choice.initStyle(StageStyle.UNDECORATED);
@@ -115,6 +117,7 @@ public class SearchTravelController implements Initializable{
 		String [] cities = {"Agadir","Casablanca","Rabat","Tanger","Marrakech","El Jadida","Asfi","Fès"};
 		arr_city.getItems().addAll(cities);
 		dep_city.getItems().addAll(cities);
+
 		
 		SpinnerValueFactory<Integer> valueFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 10);
 		valueFactory.setValue(1);

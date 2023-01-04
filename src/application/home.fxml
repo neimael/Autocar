@@ -4,10 +4,11 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="home" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="406.0" prefWidth="719.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.homeController">
+<AnchorPane fx:id="home" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="406.0" prefWidth="719.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.homeController">
    <children>
-      <ImageView fitHeight="406.0" fitWidth="736.0" layoutX="-3.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="406.0" fitWidth="736.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/back.png" />
          </image>
@@ -27,14 +28,19 @@
             <Image url="@../img/Screenshot%202022-11-13%20111837.jpg" />
          </image>
       </ImageView>
-      <Button layoutX="639.0" layoutY="340.0" mnemonicParsing="false" onAction="#next" prefHeight="55.0" prefWidth="83.0" style="-fx-background-color: #4072cf;" AnchorPane.bottomAnchor="11.0" AnchorPane.rightAnchor="0.0">
-         <graphic>
-            <ImageView fitHeight="39.0" fitWidth="109.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../img/icons8-chevron-droit-64.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </Button>
+      <Button layoutX="617.0" layoutY="333.0" mnemonicParsing="false" onAction="#next" prefHeight="61.0" prefWidth="110.0" style="-fx-background-color: #4072cf;" AnchorPane.bottomAnchor="12.0" AnchorPane.rightAnchor="19.0" />
+      <ImageView fitHeight="39.0" fitWidth="109.0" layoutX="659.0" layoutY="348.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/icons8-chevron-droit-64.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="136.0" layoutY="340.0" mnemonicParsing="false" onAction="#admin" prefHeight="55.0" prefWidth="110.0" style="-fx-background-color: #4072cf;" />
+      <ImageView fitHeight="39.0" fitWidth="53.0" layoutX="152.0" layoutY="348.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/icons8-chevron-droit-64.png" />
+         </image>
+      </ImageView>
+      <Text fill="#f3fb1c" layoutX="198.0" layoutY="372.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ADMIN" wrappingWidth="55.76629638671875" />
+      <Text fill="#f3fb1c" layoutX="617.0" layoutY="372.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CLIENT" />
    </children>
 </AnchorPane>

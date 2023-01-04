@@ -5,10 +5,10 @@ import java.time.LocalDate;
 
 
 public class Travel {
-	
+	private static int id;
 	private static String company_name;
 	private static String city_dep;
-	private static String ciy_arr;
+	private static String city_arr;
 	private static Time dep_time;
 	private static Time arr_time;
 	private static float price;
@@ -16,14 +16,42 @@ public class Travel {
 	private static LocalDate date_travel;
 	
 	
-	public Travel(String company_name, Time dep_time, Time arr_time, float price) {
+	
+	public Travel (int id,String company_name, Time dep_time, Time arr_time, float price) {
+		Travel.id= id;
 		Travel.company_name = company_name;
 		Travel.dep_time = dep_time;
 		Travel.arr_time = arr_time;
 		Travel.price = price;
+		
+	}
+	
+
+	public Travel (int id,String company_name, Time dep_time, Time arr_time, float price,int num_place,String city_dep,String city_arr,LocalDate date_travel) {
+		Travel.id= id;
+		Travel.company_name = company_name;
+		Travel.dep_time = dep_time;
+		Travel.arr_time = arr_time;
+		Travel.price = price;
+		Travel.num_places=num_place;
+		Travel.date_travel=date_travel;
+		Travel.city_dep=city_dep;
+		Travel.city_arr=city_arr;
+		
 	}
 	
 	
+	
+	static public int getId() {
+		return id;
+	}
+
+
+	static public void setId(int id) {
+		Travel.id = id;
+	}
+
+
 	static public String getCompany_name() {
 		return company_name;
 	}
@@ -44,13 +72,13 @@ public class Travel {
 	}
 
 
-	static public String getCiy_arr() {
-		return ciy_arr;
+	static public String getCity_arr() {
+		return city_arr;
 	}
 
 
-	static public void setCiy_arr(String ciy_arr) {
-		Travel.ciy_arr = ciy_arr;
+	static public void setCiy_arr(String city_arr) {
+		Travel.city_arr = city_arr;
 	}
 
 
